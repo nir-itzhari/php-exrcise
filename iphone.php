@@ -2,16 +2,17 @@
 
 require_once "./mobileModel.php";
 
-class Iphone extends Mobile 
+class Iphone extends Mobile
 {
     public $appInstalled;
-
+    private $screenSizeCheck;
 
     public function __construct($model, $manufacture, $color, $screenSize, $appInstalled)
     {
         parent::__construct($model, $manufacture, $color, $screenSize);
 
         $this->appInstalled = $appInstalled < 0 ? $appInstalled = "Applications installed must be positive number" : $appInstalled;
+        $this->screenSizeCheck = parent::isScreenLarge();
     }
 
     public function display()
@@ -24,7 +25,9 @@ class Iphone extends Mobile
 
     public function checkScreenSize()
     {
-        parent::isScreenLarge();
+        if ($this->screenSizeCheck) {
+            echo "Screen size is big";
+        }
     }
 
 
@@ -34,6 +37,6 @@ class Iphone extends Mobile
                 Manufacture: $this->manufacture <br>
                 Color: $this->color <br>
                 Screen Size: $this->screenSize <br>
-                App installed: $this->appInstalled";
+                App installed: $this->appInstalled <br>";
     }
 }
