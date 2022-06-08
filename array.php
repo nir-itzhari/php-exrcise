@@ -10,7 +10,7 @@ function arrayNumber($maxNumber)
         $maxNumber = 20;
     }
     echo "Array of numbers: ";
-    for ($i = 1; $i < $maxNumber; $i++) {
+    for ($i = 1; $i <= $maxNumber; $i++) {
         $arr[] = $i;
         echo $i . " ";
     }
