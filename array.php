@@ -2,7 +2,7 @@
 
 function arrayNumber($maxNumber)
 {
-    $arr = array();
+    $arr = [];
     $sum = 0;
     $avg = 0;
 
