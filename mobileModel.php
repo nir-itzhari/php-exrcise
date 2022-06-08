@@ -2,7 +2,7 @@
 
 require_once "./screenSize.php";
 
-abstract class Mobile implements ScreenSize 
+abstract class Mobile implements ScreenSize
 {
     public $model;
     public $manufacture;
@@ -32,11 +32,9 @@ abstract class Mobile implements ScreenSize
     public function isScreenLarge()
     {
         if ($this->screenSize > 15) {
-            echo "<br>";
-            echo "Screen Size is Big: True";
+            return true;
         } else {
-            echo "<br>";
-            echo "Screen Size is Big: False";
+            return false;
         }
     }
 }
