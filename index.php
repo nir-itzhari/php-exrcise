@@ -15,10 +15,13 @@
     </form>
 
     <?php
-    require_once "./array.php";
-    echo "<br>";
-    $arrSum = arrayNumber($_GET["maxNumber"]);
-    echo $arrSum;
+    if (isset($_GET["maxNumber"])) {
+        require_once "./array.php";
+        echo "<br>";
+        $arrSum = arrayNumber($_GET["maxNumber"]);
+        echo $arrSum;
+    }
+
     ?>
 
 
