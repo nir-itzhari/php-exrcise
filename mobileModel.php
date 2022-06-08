@@ -14,7 +14,7 @@ abstract class Mobile implements ScreenSize
         $this->model = $model;
         $this->manufacture = $manufacture;
         $this->color = $color;
-        $this->screenSize = $screenSize < 5 | $screenSize > 20 ? $screenSize = "Screen Size must be between 5 ot 20 inches" : $screenSize;
+        $this->screenSize = $screenSize < 5 | $screenSize > 20 ? $screenSize = "Screen Size must be between 5 to 20 inches" : $screenSize;
     }
 
     public function display()
