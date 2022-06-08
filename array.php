@@ -21,11 +21,11 @@ function sum($arrOfNumbers)
     return $sum;
 }
 
-function getAvg($sumOfNumber, $arrOfNumbers)
+function getAvg($sumOfNumberInArr, $arrOfNumbers)
 {
     $avg = 0;
 
-    $avg = $sumOfNumber / count($arrOfNumbers);
+    $avg = $sumOfNumberInArr / count($arrOfNumbers);
 
     return $avg;
 }
