@@ -10,7 +10,7 @@
 
 <body>
     <form method="get">
-        Maximum Number: <input key="maxNumber" type="number" name="maxNumber"><br>
+        Maximum Number: <input type="number" name="maxNumber"><br>
         <button type="submit">שלח/י</button>
     </form>
 
