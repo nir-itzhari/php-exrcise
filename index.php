@@ -17,9 +17,23 @@
     <?php
     if (isset($_GET["maxNumber"])) {
         require_once "./array.php";
+        $arr = arrayNumber($_GET["maxNumber"]);
+        echo "<br> Array of Numbers: ";
+
+        foreach($arr as $value) {
+            echo $value . " ";
+        }
         echo "<br>";
-        $arrSum = arrayNumber($_GET["maxNumber"]);
-        echo $arrSum;
+
+        $sum = sum($arr);
+
+        echo "Sum: " . $sum;
+
+        echo "<br>";
+
+        $avg = getAvg($sum,$arr);
+
+        echo "Avg: " . $avg;
     }
 
     ?>

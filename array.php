@@ -3,30 +3,29 @@
 function arrayNumber($maxNumber)
 {
     $arr = [];
-    $sum = 0;
-    $avg = 0;
 
-    if ($maxNumber === null) {
-        $maxNumber = 20;
-    }
-    echo "Array of numbers: ";
     for ($i = 1; $i <= $maxNumber; $i++) {
         $arr[] = $i;
-        echo $i . " ";
     }
+    return $arr;
+}
 
-    echo "<br>";
-    echo "<br>";
 
-    echo "Sum: ";
-    foreach ($arr as $value) {
+function sum($arrOfNumbers)
+{
+    $sum = 0;
+    foreach ($arrOfNumbers as $value) {
         $sum += $value;
     }
 
-    echo $sum . "<br>";
-    echo "<br>";
-    echo "Avg: ";
-    $avg = $sum / count($arr);
+    return $sum;
+}
 
-    echo $avg;
+function getAvg($sumOfNumber, $arrOfNumbers)
+{
+    $avg = 0;
+
+    $avg = $sumOfNumber / count($arrOfNumbers);
+
+    return $avg;
 }
